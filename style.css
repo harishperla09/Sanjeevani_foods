@@ -703,8 +703,18 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar .container {
+        flex-wrap: nowrap;
+        overflow: visible;
+    }
+    
     .nav-brand {
         gap: 10px;
+        flex-shrink: 0;
     }
     
     .logo {
@@ -713,12 +723,34 @@ body {
     }
     
     .nav-brand h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.2;
     }
     
     .nav-menu {
-        gap: 12px;
+        gap: 5px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-left: auto;
+        padding-left: 10px;
+    }
+    
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .nav-menu li {
+        flex-shrink: 0;
+    }
+    
+    .nav-menu a {
         font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 12px;
+        white-space: nowrap;
     }
     
     .hero {
@@ -748,7 +780,7 @@ body {
     }
     
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .product-grid,
@@ -796,7 +828,7 @@ body {
     }
     
     .navbar {
-        padding: 12px 0;
+        padding: 8px 0;
     }
     
     .logo {
@@ -806,16 +838,17 @@ body {
     }
     
     .nav-brand h1 {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.2;
     }
     
     .nav-menu {
-        gap: 8px;
-        font-size: 0.75rem;
+        gap: 3px;
     }
     
     .nav-menu a {
-        padding: 5px 8px;
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
     
     .hero {
@@ -845,11 +878,11 @@ body {
     }
     
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
     
     .section-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .cta-button {
